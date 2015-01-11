@@ -22,7 +22,11 @@
             eventCollection: "big",
             groupBy: "svc",
             interval: "hourly",
-            timeframe: "yesterday"
+            timezone: 0,
+            timeframe: {
+                "start" : "2015-01-10T20:00:00.000Z",
+                "end" : "2015-01-10T22:00:00.000Z"
+            }
         });
         var chart = client.draw(count, document.getElementById("chart"), {
             title: "Custom chart title",
